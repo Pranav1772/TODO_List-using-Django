@@ -1,0 +1,17 @@
+{% extends 'base/main.html' %}
+
+{% block containt %}
+    <div class="header-bar">
+        <h1>Login</h1>
+    </div>
+    <div class="card-body">
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input class="btn btn-outline-secondary" type="submit" value="Login">
+            <br>
+            <p style="margin-top:10px;">Dont have an account? <a href=" {% url 'register' %} " style="color: #E8796F"><u>Register!</u></a></p>
+        </form>
+    </div>
+{% endblock containt %}
+
